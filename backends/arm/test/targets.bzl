@@ -19,21 +19,18 @@ def define_arm_tests():
         "ops/test_avg_pool2d.py",
         "ops/test_cat.py",
         "ops/test_conv2d.py",
-        "ops/test_conv3d.py",
-        "ops/test_cos.py",
         "ops/test_linear.py",
-        "ops/test_max_pool.py",
         "ops/test_max_pool1d.py",
         "ops/test_mul.py",
         "ops/test_permute.py",
         "ops/test_rsqrt.py",
-        "ops/test_sigmoid.py",
         "ops/test_slice.py",
+        "ops/test_sigmoid.py",
         "ops/test_sub.py",
         "ops/test_tanh.py",
-        "ops/test_to_copy.py",
-        "ops/test_unsqueeze.py",
         "ops/test_view.py",
+        "ops/test_cos.py",
+        "ops/test_to_copy.py",
     ]
 
     # Quantization
@@ -50,7 +47,11 @@ def define_arm_tests():
         "misc/test_custom_partition.py",
         "misc/test_debug_hook.py",
         # "misc/test_dim_order.py", (TODO - T238390249)
-        "misc/test_outputs_order.py",
+    ]
+
+    # Deprecation tests
+    test_files += [
+        "deprecation/test_arm_compile_spec_deprecation.py",
     ]
 
     TESTS = {}
